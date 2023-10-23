@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<suite name="Big TestNG Test">
+    <listeners>
+        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerAdapter"/>
+        <listener class-name="com.big.utils.AnnotationTransformer"/>
+    </listeners>
+    <groups>
+        <run>
+            <exclude name="Sanity"/>
+            <include name="Regression"/>
+            <include name="Smoke"/>
+        </run>
+    </groups>
+    <test name="SharedServicesTest">
+        <classes>
+            <class name="com.big.testNGscripts.InspectDlvry"/>
+        </classes>
+    </test>
+</suite>
